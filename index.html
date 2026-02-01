@@ -133,8 +133,15 @@
     }
     
     .header-logo img {
-      height: 2.5rem;
+      height: 4rem;
       width: auto;
+    }
+    @media(max-width:767px)
+    {
+        .header-logo img {
+        height: 2.5rem;
+        width: auto;
+      }
     }
     
     .nav-links {
@@ -239,7 +246,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('assets/hero-bg.jpg');
+      background-image: url('assets/hero-image.avif');
       background-size: cover;
       background-position: center;
       opacity: 0.7;
@@ -248,7 +255,7 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.3), rgba(30, 41, 59, 0.6), rgba(30, 41, 59, 0.85));
+      background: rgba(17, 35, 59, 0.68);
     }
     
     .hero-content {
@@ -273,13 +280,23 @@
       color: #fff;
       line-height: 1.1;
       margin-bottom: 1.5rem;
-      font-style: italic;
+      -webkit-text-stroke: 4px #fff;
     }
     
     .hero h1 span {
       color: var(--kpmt-blue);
+      -webkit-text-stroke: 4px var(--kpmt-blue);
     }
-    
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        -webkit-text-stroke: 2px #fff;
+      }
+      .hero h1 span {
+        -webkit-text-stroke: 2px var(--kpmt-blue);
+      }
+    }
+
     @media (min-width: 768px) {
       .hero h1 {
         font-size: 3rem;
@@ -299,7 +316,7 @@
     }
     
     .hero p {
-      color: rgba(255, 255, 255, 0.7);
+      color: #fff;
       font-size: 1rem;
       max-width: 42rem;
       margin: 0 auto 2.5rem;
@@ -719,6 +736,12 @@
       padding: 1rem 1.5rem;
       text-align: center;
     }
+    @media(max-width:767px)
+    {
+      .stats-badge{
+        left: -0.7rem;
+      }
+    }
     
     @media (min-width: 1024px) {
       .stats-badge {
@@ -1011,7 +1034,7 @@
     <div class="container">
       <nav>
         <a href="#home" class="header-logo">
-          <img src="assets/logo-light.png" alt="KP Mobile Tech">
+          <img src="assets/logo.png" alt="KP Mobile Tech">
         </a>
         
         <div class="nav-links">
@@ -1073,7 +1096,7 @@
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">
-            <img src="assets/icon-gem.svg" alt="" class="icon-blue">
+            <img src="assets/product-icon.svg" alt="" class="icon-blue">
           </div>
           <h3>Great Products</h3>
           <p>We prioritize value for money across all our products, ensuring consumers trust our brands and enjoy the best possible mobile experience.</p>
@@ -1081,7 +1104,7 @@
         
         <div class="feature-card">
           <div class="feature-icon">
-            <img src="assets/icon-folder.svg" alt="" class="icon-blue">
+            <img src="assets/mobile-icon.svg" alt="" class="icon-blue">
           </div>
           <h3>Content Portfolio</h3>
           <p>We continuously update and expand our portfolio to stay fresh and ahead of the market, offering new content categories to consumers.</p>
@@ -1089,7 +1112,7 @@
         
         <div class="feature-card">
           <div class="feature-icon">
-            <img src="assets/icon-shield-check.svg" alt="" class="icon-blue">
+            <img src="assets/shield-icon.svg" alt="" class="icon-blue">
           </div>
           <h3>Ad-Free Platforms</h3>
           <p>We pride ourselves on delivering high-quality content free from third-party advertisements, ensuring a seamless user experience.</p>
@@ -1108,11 +1131,11 @@
       
       <div class="experiences-grid">
         <div class="experience-card">
-          <img class="card-bg" src="assets/fitness.jpg" alt="Health & Fitness">
+          <img class="card-bg" src="assets/fitness-image.avif" alt="Health & Fitness">
           <div class="experience-overlay"></div>
           <div class="experience-content">
             <div class="experience-icon">
-              <img src="assets/icon-fitness.svg" alt="" class="icon-white">
+              <img src="assets/health-icon.svg" alt="" class="icon-white">
             </div>
             <h3>Health & Fitness</h3>
             <p>Comprehensive wellness companions that track progress, offer workout routines, and provide nutritional advice for a healthier...</p>
@@ -1120,11 +1143,11 @@
         </div>
         
         <div class="experience-card">
-          <img class="card-bg" src="assets/deals.jpg" alt="Deals & Discounts">
+          <img class="card-bg" src="assets/discounts-image.avif" alt="Deals & Discounts">
           <div class="experience-overlay"></div>
           <div class="experience-content">
             <div class="experience-icon">
-              <img src="assets/icon-deals.svg" alt="" class="icon-white">
+              <img src="assets/shopping-icon.svg" alt="" class="icon-white">
             </div>
             <h3>Deals & Discounts</h3>
             <p>Unlock exclusive savings with our smart shopping assistants. Real-time discounts and curated offers right at your fingertips.</p>
@@ -1132,7 +1155,7 @@
         </div>
         
         <div class="experience-card">
-          <img class="card-bg" src="assets/games.jpg" alt="Interactive Games">
+          <img class="card-bg" src="assets/gaming-image.avif" alt="Interactive Games">
           <div class="experience-overlay"></div>
           <div class="experience-content">
             <div class="experience-icon">
@@ -1158,19 +1181,19 @@
           
           <div class="about-features">
             <div class="about-feature">
-              <img src="assets/icon-circle-check.svg" alt="" class="icon-blue">
+              <img src="assets/tick-icon.svg" alt="" class="icon-blue">
               <span>Seamless Payments</span>
             </div>
             <div class="about-feature">
-              <img src="assets/icon-circle-check.svg" alt="" class="icon-blue">
+              <img src="assets/tick-icon.svg" alt="" class="icon-blue">
               <span>Curated Content</span>
             </div>
             <div class="about-feature">
-              <img src="assets/icon-circle-check.svg" alt="" class="icon-blue">
+              <img src="assets/tick-icon.svg" alt="" class="icon-blue">
               <span>Expert Support</span>
             </div>
             <div class="about-feature">
-              <img src="assets/icon-circle-check.svg" alt="" class="icon-blue">
+              <img src="assets/tick-icon.svg" alt="" class="icon-blue">
               <span>Innovation First</span>
             </div>
           </div>
@@ -1178,7 +1201,7 @@
         
         <div class="about-image-wrapper">
           <div class="about-image">
-            <img src="assets/about-img.jpg" alt="KPMobTech Team">
+            <img src="assets/about-img.avif" alt="KPMobTech Team">
           </div>
           <div class="stats-badge">
             <div class="number">5M+</div>
@@ -1201,7 +1224,7 @@
             <div class="contact-items">
               <div class="contact-item">
                 <div class="contact-item-icon">
-                  <img src="assets/icon-phone.svg" alt="" class="icon-white">
+                  <img src="assets/phone-icon.svg" alt="" class="icon-white">
                 </div>
                 <div>
                   <div class="contact-item-label">Phone</div>
@@ -1211,7 +1234,7 @@
               
               <div class="contact-item">
                 <div class="contact-item-icon">
-                  <img src="assets/icon-mail.svg" alt="" class="icon-white">
+                  <img src="assets/email-icon.svg" alt="" class="icon-white">
                 </div>
                 <div>
                   <div class="contact-item-label">Email</div>
@@ -1221,7 +1244,7 @@
               
               <div class="contact-item">
                 <div class="contact-item-icon">
-                  <img src="assets/icon-map-pin.svg" alt="" class="icon-white">
+                  <img src="assets/location-icon.svg" alt="" class="icon-white">
                 </div>
                 <div>
                   <div class="contact-item-label">Office</div>
@@ -1258,7 +1281,7 @@
     <div class="container footer-main">
       <div class="footer-grid">
         <div>
-          <img src="assets/logo-light.png" alt="KP Mobile Tech" class="footer-logo">
+          <img src="assets/logo-dark.png" alt="KP Mobile Tech" class="footer-logo">
           <p class="footer-desc">Empowering users with premium digital content and innovative mobile solutions. Trust, quality, and experience in every pixel.</p>
         </div>
         
